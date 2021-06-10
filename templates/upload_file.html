@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<header class="text-gray-600 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">Cloud Storage Application</span>
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <a href="upload_file" class="mr-5 hover:text-gray-900">Upload file</a>
+      <a href="view" class="mr-5 hover:text-gray-900">view</a>
+      <a href="download_file" class="mr-5 hover:text-gray-900">Download file</a>
+    </nav>
+        </div>
+</header>
+
+
+
+
+<form action="/upload_file_"  method="post" , enctype="multipart/form-data">
+    <div class="lg:w-1/2 md:w-2/3 mx-auto">
+      <div class="flex flex-wrap -m-2">
+        <div class="p-2 w-1/2">
+          <div class="relative">
+            <label for="name" class="leading-7 text-sm text-gray-600">Please Upload your file below: </label>
+            <input type="file" id="user_file" name="user_file" class="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+        </div>
+
+
+            <input type="submit">
+      </div>
+    </div>
+          </form>
+
+
+{% endblock %}
